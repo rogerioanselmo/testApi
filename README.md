@@ -17,11 +17,11 @@ The Car Inventory API provides endpoints to list all cars, list sold cars, list 
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/car-inventory-api.git
+    git clone https://github.com/rogerioanselmo/testApi.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd car-inventory-api
+    cd testApi
     ```
 3. Restore the dependencies:
     ```bash
@@ -80,32 +80,97 @@ The Car Inventory API provides endpoints to list all cars, list sold cars, list 
     ```
 
 ## Example JSON File
-Place a file named `cars.json` in the root of your project directory with the following structure:
+Place a file named `data.json` inside ./CarsApi/API.Service/Data with the following structure:
 
 ```json
-[
-    {
-        "id": 1,
-        "make": "Toyota",
-        "model": "Camry",
-        "year": 2020,
-        "price": 24000,
-        "isSold": false
-    },
-    {
-        "id": 2,
-        "make": "Honda",
-        "model": "Civic",
-        "year": 2019,
-        "price": 18000,
-        "isSold": true
-    },
-    {
-        "id": 3,
-        "make": "Ford",
-        "model": "Mustang",
-        "year": 2021,
-        "price": 32000,
-        "isSold": false
-    }
-]
+{
+    "inventory": [
+        {
+            "manufacturer": "Ford",
+            "items": [
+                {
+                    "sku": 1000,
+                    "model": "Mustang",
+                    "year": 2020,
+                    "color": "red",
+                    "cost": 15343,
+                    "status": "Sold"
+                },
+                {
+                    "sku": 1001,
+                    "model": "Mustang",
+                    "year": 2018,
+                    "color": "blue",
+                    "cost": 13499,
+                    "status": "Unsold"
+                },
+                {
+                    "sku": 1301,
+                    "model": "Ranger",
+                    "year": 2014,
+                    "color": "blue",
+                    "cost": 12499,
+                    "status": "Unsold"
+                }
+            ]
+        },
+        {
+            "manufacturer": "Fiat",
+            "items": [
+                {
+                    "sku": 2000,
+                    "model": "Urbana",
+                    "year": 2020,
+                    "color": "red",
+                    "cost": 15343,
+                    "status": "Sold"
+                },
+                {
+                    "sku": 2001,
+                    "model": "Pop",
+                    "year": 2018,
+                    "color": "blue",
+                    "cost": 13499,
+                    "status": "Preparing"
+                },
+                {
+                    "sku": 2031,
+                    "model": "Pop",
+                    "year": 2019,
+                    "color": "white",
+                    "cost": 10999,
+                    "status": "Unsold"
+                },
+                {
+                    "sku": "Lounge",
+                    "model": "Ranger",
+                    "year": 2016,
+                    "color": "silver",
+                    "cost": 11499,
+                    "status": "Unsold"
+                }
+            ]
+        },
+        {
+            "manufacturer": "Volkswagon",
+            "items": [
+                {
+                    "sku": 3031,
+                    "model": "Tiguan",
+                    "year": 2019,
+                    "color": "silver",
+                    "cost": 19999,
+                    "status": "Unsold"
+                },
+                {
+                    "sku": 3423,
+                    "model": "Jetta",	
+                    "year": 2024,
+                    "color": "blue",
+                    "cost": 21499,
+                    "status": "Sale Pending"
+                }
+            ]
+        }
+    ]
+}
